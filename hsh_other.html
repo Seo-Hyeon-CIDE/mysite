@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      header {
+        width: 1000px;
+        height: 640px;
+        margin: 10px 450px 0 450px;
+
+      }
+      h1{
+        margin-left: 30px;
+        margin-top: 30px;
+        color: #F5E637;
+        text-align: center;
+      }
+    ul,li{list-style:none;
+    }
+    .slide{height: 450px;
+      width: 850px;
+      margin: 50px 65px 50px 100px;
+      overflow: hidden;
+      position: relative;
+    }
+    .slide ul{width:calc(100% * 6);display:flex;transition:1s;}
+    .slide li{width:calc(100% / 6);height:400px;}
+    .slide li:nth-child(1){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMjgy/MDAxNTYwMDAwNTcxMzk2.359YyYKumPOOFRiMaNBnTmRiHl3-DE7kZFs0pt5sJRYg.ntkvxBchOUzwII20atU7530MkXQLNLz_YO9ci7YaFjEg.JPEG.cide0615/%EB%A6%AC%ED%94%8C%EB%A0%9B1.jpg?type=w966');}
+    .slide li:nth-child(2){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMTMz/MDAxNTYwMDAwNTcxMzk4.SJLQhCCwyNBLMm0sDuOc1eZjmy_t0omABdcCjrRx1_Ig.L-NQW-_H0BjdCZsTq9ru3tau03_j8ltQwQFDL8Fw_B0g.JPEG.cide0615/%EB%A6%AC%ED%94%8C%EB%A0%9B2.jpg?type=w966');}
+    .slide li:nth-child(3){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfOTcg/MDAxNTYwMDAwNTcxNzY4.NLziZXaU2IxNLYcDDyVdrJ0XjoHVh4Q6DqccrCq--pgg.XhMAC5POKQE2PyxVTLXtP7NzcyD5cWuCcdfn61_x4pIg.JPEG.cide0615/%EC%9E%A1%EC%A7%804.jpg?type=w966');}
+    .slide li:nth-child(4){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMjU0/MDAxNTYwMDAwNTcxNDAw.TR9YYkq0PGqPkVI7_UHidKExWZJpaJ3KGsKhkbh3GCYg.t80WPigdbTHnORFZzV7B9UX8n4vZP0r1TxbiUDiGhUMg.JPEG.cide0615/%EC%9E%A1%EC%A7%801.jpg?type=w966');}
+    .slide li:nth-child(5){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMjc4/MDAxNTYwMDAwNTcxNDEw.cgmtsVvr3tdR0RtuNBpm8oOKUYAljqdFtIwUN1kMaEcg.yA4k3i3CAohoqYxGG-dg7eabf6KqQnzh3ZLP6itDlCEg.JPEG.cide0615/%EC%9E%A1%EC%A7%802.jpg?type=w966');}
+    .slide li:nth-child(6){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMTIy/MDAxNTYwMDAwNTcxNDEw.9nK48Ww_ZoFOZfirKHnU25q4lszH4KOFkFENhTBPcVQg.ixrfJRMxWl1syzX7ShH02peBDI4iAzERlBk4dMbNJaUg.JPEG.cide0615/%EC%9E%A1%EC%A7%803.jpg?type=w966');}
+    .slide input{display:none;}
+    .slide .bullet{position:absolute;bottom:10px;left:0;right:0;text-align:center;z-index:10;}
+    .slide .bullet label{width:15px;
+      height:15px;
+      border-radius: 10px;
+      border:2px solid #666;
+      display:inline-block;
+      background:#fff;
+      font-size:0;
+      transition:0.5s;
+      cursor:pointer;}
+    /* 슬라이드 조작 */
+    #pos1:checked ~ ul{margin-left:0;}
+    #pos2:checked ~ ul{margin-left:-100%;}
+    #pos3:checked ~ ul{margin-left:-200%;}
+    #pos4:checked ~ ul{margin-left:-300%;}
+    #pos5:checked ~ ul{margin-left:-400%;}
+    #pos6:checked ~ ul{margin-left:-500%;}
+
+    /* bullet 조작 */
+    #pos1:checked ~ .bullet label:nth-child(1),
+    #pos2:checked ~ .bullet label:nth-child(2),
+    #pos3:checked ~ .bullet label:nth-child(3),
+    #pos4:checked ~ .bullet label:nth-child(4),
+    #pos5:checked ~ .bullet label:nth-child(5),
+    #pos6:checked ~ .bullet label:nth-child(6){background:#F5E637;}
+
+    h3{
+      color: #F5E637;
+      font-size: 20px;
+      width: 90px;
+      height: 20px;
+      padding-top: 5px;
+    }
+    h3:hover {
+      background: url('https://postfiles.pstatic.net/MjAxOTA2MDlfODMg/MDAxNTYwMDA3NTE5NzMx.tuM-HeR3MqrfEmR0bHh8r7zku2hmEq71MGRtCIy222Qg.ul8LteC5jlnUFGDbvJrTbuBdQ5ra1Lo5rpbQI5-2sz0g.PNG.cide0615/Asset_11.png?type=w966');
+    }
+    a {
+      text-decoration: none;
+    }
+      #m {
+        margin-bottom: 50px;
+      }
+      #video {
+          margin: 0 0 100px 155px;
+      }
+  </style>
+  </head>
+
+  <body>
+    <header>
+        <h1>InDesign</h1>
+    <div class="slide">
+    <input type="radio" name="pos" id="pos1" checked>
+    <input type="radio" name="pos" id="pos2">
+    <input type="radio" name="pos" id="pos3">
+    <input type="radio" name="pos" id="pos4">
+    <input type="radio" name="pos" id="pos5">
+    <input type="radio" name="pos" id="pos6">
+    <ul>
+      <li><a href="https://postfiles.pstatic.net/MjAxOTA2MDhfMjE0/MDAxNTYwMDAwNTkyMjM4.TCHsaM2WhK8gL3-wwDZa8SHkhGSOND3V231rllrrTSkg.tpCQYnB5aEBmAkm3SjKxJCF1u4XsgiiYNRK63xmhi6Eg.JPEG.cide0615/%EB%A6%AC%ED%94%8C%EB%A0%9B1.jpg?type=w966" target="_blank">
+        <h3>원본 보기</h3></a></li>
+      <li><a href="https://postfiles.pstatic.net/MjAxOTA2MDhfNzMg/MDAxNTYwMDAwNTkyMTk2.cO2Q4lrJTmbg0-ePRTlSXYmAzcvb2hVhJIN4hx0lURIg.QNH89DDWaDuyuWJJuI_eVRPr3Q25sS79ilonFvftve0g.JPEG.cide0615/%EB%A6%AC%ED%94%8C%EB%A0%9B2.jpg?type=w966" target="_blank">
+      <h3>원본 보기</h3></a></li>
+      <li><a href="https://postfiles.pstatic.net/MjAxOTA2MDhfMTc4/MDAxNTYwMDAwNTkzMTYy.Wf3xxCDN53HPG2SpmS3ni_Dgt8mt9eCa3sDB9DWofwUg.UdPlzHjbJ-7eCBF70LQKImJM7YYRRcXPthmRRXT9ABog.JPEG.cide0615/%EC%9E%A1%EC%A7%809.jpg?type=w966" target="_blank">
+      <h3>원본 보기</h3></a></li>
+      <li><a href="https://postfiles.pstatic.net/MjAxOTA2MDhfMTI5/MDAxNTYwMDAwNTkyMzgz.DWSFp_Ixkb-khBPrjDpVydukEpfMJKpO4y8TGKj9HZYg.pDPejYGH098QFnFN8iNsS_yVDErhY8I9zJll0tPmbzQg.JPEG.cide0615/%EC%9E%A1%EC%A7%802.jpg?type=w966" target="_blank">
+      <h3>원본 보기</h3></a></li>
+      <li><a href="https://postfiles.pstatic.net/MjAxOTA2MDhfMTQ2/MDAxNTYwMDAwNTkyNDc3.Xa2Xgq2AI8Sy_4fDUNv21sMH3_8TfEeVv_h-DHPNIrEg.X7clYxfS8AS9aLrNmlPVB6MMMiIFBtIpK1d3a1TausMg.JPEG.cide0615/%EC%9E%A1%EC%A7%803.jpg?type=w966" target="_blank">
+      <h3>원본 보기</h3></a></li>
+      <li><a href="https://postfiles.pstatic.net/MjAxOTA2MDhfMjM3/MDAxNTYwMDAwNTkyNDM2.eDyeykSCTFYZRhMm4PCr1Xq--wSuqopuDXLEOoPK1f4g.BB-x68HmrUmc7ktRcd_-mnIhSgMxUSEsClYoj8z7BXEg.JPEG.cide0615/%EC%9E%A1%EC%A7%805.jpg?type=w966" target="_blank">
+      <h3>원본 보기</h3></a></li>
+    </ul>
+    <p class="bullet">
+      <label for="pos1">1</label>
+      <label for="pos2">2</label>
+      <label for="pos3">3</label>
+      <label for="pos4">4</label>
+      <label for="pos5">5</label>
+      <label for="pos6">6</label>
+    </p>
+  </div>
+
+  <h1 id='m'> Typography </h1>
+  <iframe id='video' width="740" height="416" src="https://serviceapi.nmv.naver.com/flash/convertIframeTag.nhn?vid=CEFAE7D66E52EE6289FB3D1904667CEBB9E7&outKey=V12501fb028a03aecca72a5f9d473c5094b0822383157f40e46d9a5f9d473c5094b08" frameborder="no" scrolling="no" title="NaverVideo" allow="autoplay; gyroscope; accelerometer; encrypted-media" allowfullscreen></iframe>
+  </header>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      header {
+        width: 1000px;
+        height: 640px;
+        margin: 10px 450px 0 450px;
+
+      }
+      h1{
+        margin-left: 30px;
+        margin-top: 30px;
+        color: #F5E637;
+        text-align: center;
+      }
+    ul,li{list-style:none;
+    }
+    .slide{height: 450px;
+      width: 850px;
+      margin: 50px 65px 100px 100px;
+      overflow: hidden;
+      position: relative;
+    }
+    .slide ul{width:calc(100% * 6);display:flex;transition:1s;}   /*calc로 6개의 슬라이드 width 설정 , 일렬로 디스플레이*/
+    .slide li{width:calc(100% / 6);height:400px;}                  /*nth-child(n) 해당 슬라이드만 설정*/
+    .slide li:nth-child(1){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfOTYg/MDAxNTU5OTkxMDY0NTYy.kqMjJe_AUiU0hJkrJUWP9_bsY1XyiUyywB8q6JJ-500g.YPv4sT9xvJWHHXY_N0i8Wy0-05iTl29TMgolNe6znnUg.PNG.cide0615/%ED%95%B4%EA%B3%A8.png?type=w966');}
+    .slide li:nth-child(2){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMTM5/MDAxNTU5OTkyOTQ1ODYw.Lm6hYRfjmik089pxgj_DA82FdUWKR4RxIg8M9yQ7pnAg.rsVA-oymMsI4lFre3SYK0oORw2BRh4oeDOeXdRvX8Ewg.PNG.cide0615/%EC%98%A4%EB%93%9C%EB%A6%AC%ED%96%85%EB%B2%88%ED%95%A9%EC%84%B1.png?type=w966');}
+    .slide li:nth-child(3){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMTgx/MDAxNTU5OTkyOTQ2MTk1.noi3AoRn6ub94mbOFktcypg4DIULrAT-yTzAqS0H9YEg.3FqLX4BjXsunyZ5oWe-QloiE5AKHwC7PWeqB2sUu6e8g.PNG.cide0615/%ED%95%98%EB%8A%98.png?type=w966');}
+    .slide li:nth-child(4){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMjA2/MDAxNTU5OTkyOTQ1NjU2.s1QiWNsToe0amVRQ-sELE9mlxAs3CbIcf8xGf7QQN9Yg.YqolJUfZdcCV0zlKunJ7H9Z034e30Q14bKiWd0XXom8g.PNG.cide0615/%EC%84%AC%EC%9E%AC%EB%A3%8C.png?type=w966');}
+    .slide li:nth-child(5){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMTEy/MDAxNTU5OTkyOTQ1NTkw.qRrElgEqqO8VFxmLBw5zAlTqtpYy15dYG0JRNGxrfFwg.tIBvM-XHC9EyXFNX7qdp8XCrGZRQ290fTQ0BcQbNoacg.PNG.cide0615/%EB%82%9A%EC%8B%9C%ED%95%A9%EC%84%B1.png?type=w966');}
+    .slide li:nth-child(6){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMTgz/MDAxNTU5OTkyOTQ2MTc3.kUStUtEKfH4qpFhvY07UtjisrTWcJz6AdHy4ZQo8Xx0g.3kWH9i_4HZRAVOZMQEcIXCgBBAjRUZYVkoXTkx-cvMAg.PNG.cide0615/%EC%98%AC%EB%9D%BC%ED%94%84%ED%95%A9%EC%84%B1.png?type=w966');}
+    .slide input{display:none;}
+    .slide .bullet{position:absolute;bottom:10px;left:0;right:0;text-align:center;z-index:10;}
+    .slide .bullet label{width:15px;
+      height:15px;
+      border-radius: 10px;
+      border:2px solid #666;
+      display:inline-block;
+      background:#fff;
+      font-size:0;
+      transition:0.5s;
+      cursor:pointer;}
+    /* 슬라이드 조작 */
+    #pos1:checked ~ ul{margin-left:0;}
+    #pos2:checked ~ ul{margin-left:-100%;}
+    #pos3:checked ~ ul{margin-left:-200%;}
+    #pos4:checked ~ ul{margin-left:-300%;}
+    #pos5:checked ~ ul{margin-left:-400%;}
+    #pos6:checked ~ ul{margin-left:-500%;}
+    /* bullet 조작 */
+    #pos1:checked ~ .bullet label:nth-child(1),
+    #pos2:checked ~ .bullet label:nth-child(2),
+    #pos3:checked ~ .bullet label:nth-child(3),
+    #pos4:checked ~ .bullet label:nth-child(4),
+    #pos5:checked ~ .bullet label:nth-child(5),
+    #pos6:checked ~ .bullet label:nth-child(6){background:#F5E637;}
+
+    h3{
+      color: #F5E637;
+      font-size: 20px;
+      width: 90px;
+      height: 20px;
+      padding-top: 5px;
+    }
+    h3:hover {
+      background: url('https://postfiles.pstatic.net/MjAxOTA2MDlfODMg/MDAxNTYwMDA3NTE5NzMx.tuM-HeR3MqrfEmR0bHh8r7zku2hmEq71MGRtCIy222Qg.ul8LteC5jlnUFGDbvJrTbuBdQ5ra1Lo5rpbQI5-2sz0g.PNG.cide0615/Asset_11.png?type=w966');
+    }
+    a {
+      text-decoration: none;
+    }
+
+  </style>
+  </head>
+
+  <body>
+    <header>
+      <h1> Graphic Design </h1>
+    <div class="slide">
+    <input type="radio" name="pos" id="pos1" checked>
+    <input type="radio" name="pos" id="pos2">
+    <input type="radio" name="pos" id="pos3">
+    <input type="radio" name="pos" id="pos4">
+    <input type="radio" name="pos" id="pos5">
+    <input type="radio" name="pos" id="pos6">
+    <ul>
+      <li><a href="https://blogfiles.pstatic.net/MjAxOTA2MDhfMTgg/MDAxNTU5OTkxMDg3NTQx.nWLeDwth7Ov4urQbncZst_McxLNyuRPYiABgmQ8bNvwg.i5gQ98o0IF7omSnJhExiVAGIgWf1J3ZPppBJrNieISYg.JPEG.cide0615/%ED%95%B4%EA%B3%A8.jpg" target="_blank">
+        <h3>원본 보기</h3></a></li>
+      <li><a href="https://postfiles.pstatic.net/MjAxOTA2MDhfMjE2/MDAxNTU5OTkyOTQ1ODEz.rQzy1wnTvuwUlsaqdEwb6CPuINUsqtx_mVqniAEolpog.qOZhVsggrTLTjf8-Csu71s3ZvXcIk2L8tEYy7CWt5Tog.PNG.cide0615/%EC%98%A4%EB%93%9C%EB%A6%AC%ED%96%85%EB%B2%88.png?type=w966" target="_blank">
+        <h3>원본 보기</h3></a></li>
+      <li><a href="https://postfiles.pstatic.net/MjAxOTA2MDhfMTY4/MDAxNTU5OTkyOTQ1OTc2.NiLkrJ_BuDmLyXe4L2D6PnM_bKpckL8v6XFaCoPlUpIg.ecVC7hp_1an9cu6IPuHueGemwwQUs_TLmDKW6qNcZn8g.PNG.cide0615/%EC%84%AC.png?type=w966" target="_blank">
+        <h3>원본 보기</h3></a></li>
+      <li><a href="https://postfiles.pstatic.net/MjAxOTA2MDhfMjMx/MDAxNTU5OTkyOTQ2MTYx.yDUBghc9txZtvZ6bzQRBCfCOVRsDQ6kOB9VaA6jBNeEg.xEXf8SOC9qiqeMYM49fmHgLy2orB9YJS0eFBpUhRLyQg.JPEG.cide0615/%EC%84%AC_%ED%95%98%EB%8A%98%EB%B2%84%EC%A0%84.jpg?type=w966" target="_blank">
+        <h3>원본 보기</h3></a></li>
+      <li><a href="https://postfiles.pstatic.net/MjAxOTA2MDhfMjI5/MDAxNTU5OTkyOTQ1NjE5.QVeHwVkLd-eHCHq0Y-oYqNknoSAZn26jPksNMhYulF8g.2A-SEhiJJZYj-pstJVGYBdiGtDOGnz6zhzfLHKpgAiwg.JPEG.cide0615/%EB%82%9A%EC%8B%9C.jpg?type=w966" target="_blank">
+        <h3>원본 보기</h3></a></li>
+      <li><a href="https://postfiles.pstatic.net/MjAxOTA2MDhfMjEz/MDAxNTU5OTkyOTQ2NjEw.F_KV9tPCGI_VlrdenTp94oqp10PayUtcWAxYZ7DbUw4g.Jrvt-KP8BjFZAwAoOCRoeTfjM2FfFnYWDcX17fkUHBwg.JPEG.cide0615/%EC%98%AC%EB%9D%BC%ED%94%84.jpg?type=w966" target="_blank">
+        <h3>원본 보기</h3></a></li>
+    </ul>
+    <p class="bullet">
+      <label for="pos1">1</label>
+      <label for="pos2">2</label>
+      <label for="pos3">3</label>
+      <label for="pos4">4</label>
+      <label for="pos5">5</label>
+      <label for="pos6">6</label>
+    </p>
+  </div>
+  </header>
+  </body>
+</html>

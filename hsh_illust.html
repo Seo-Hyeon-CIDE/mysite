@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      header {
+        width: 1000px;
+        height: 640px;
+        margin: 10px 450px 0 450px;
+
+      }
+      h1{
+        margin-left: 65px;
+        margin-top: 30px;
+        color: #F5E637;
+        text-align: center;
+      }
+    ul,li{list-style:none;
+    }
+    .slide{height: 450px;
+      width: 850px;
+      margin: 50px 65px 100px 100px;
+      overflow: hidden;
+      position: relative;
+    }
+    .slide ul{width:calc(100% * 4);display:flex;transition:1s;}
+    .slide li{width:calc(100% / 4);height:400px;}
+    .slide li:nth-child(1){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMTQ2/MDAxNTU5OTk1MjcyOTE5.5_zVkhyZpJMQ-XkRUmkALReD9xXZljUfAlT1-5JX2dgg.VBdnMR_l3-hdxDJKdrOCJebqDWyi7q7NloNB3Ci8LGwg.PNG.cide0615/%EC%BB%B51.png?type=w966');}
+    .slide li:nth-child(2){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMTkg/MDAxNTU5OTk1MjczMjE1.Lo8oYLZTJnxucO0QmAxBNqyEmeUp4bVH-fGRrYXmdiAg.l2Jbh0fYfO-V8kP2nMBIgxxrRYCZ7Sy6sHdRnHPrx1cg.PNG.cide0615/%ED%95%A0.png?type=w966');}
+    .slide li:nth-child(3){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMjIw/MDAxNTU5OTk1MjcyOTM5.3yVWDPvtffArY22A8z0l-gsmYEuQHjfCPrg5NmFsSoIg.-iAx_JlOmLVkltYN8wqhjQdoms247cN6BsM9sXSHUpQg.PNG.cide0615/%EC%BA%94%EB%B2%84%EC%8A%A4%ED%99%94.png?type=w966');}
+    .slide li:nth-child(4){background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMjMz/MDAxNTU5OTk1MjcyOTI0.CBbPSet_suXZksYgD6gM_UJucykLoCSjml1MnN93Xvog.Jx2Kfy7ZcP8uo5Wsxz1gmsDLEq8X0QRCZgcGuyh5mnEg.JPEG.cide0615/%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg?type=w966');}
+    .slide input{display:none;}
+    .slide .bullet{position:absolute;bottom:10px;left:0;right:0;text-align:center;z-index:10;}
+    .slide .bullet label{width:15px;
+      height:15px;
+      border-radius: 10px;
+      border:2px solid #666;
+      display:inline-block;
+      background:#fff;
+      font-size:0;
+      transition:0.5s;
+      cursor:pointer;}
+    /* 슬라이드 조작 */
+    #pos1:checked ~ ul{margin-left:0;}
+    #pos2:checked ~ ul{margin-left:-100%;}
+    #pos3:checked ~ ul{margin-left:-200%;}
+    #pos4:checked ~ ul{margin-left:-300%;}
+
+    /* bullet 조작 */
+    #pos1:checked ~ .bullet label:nth-child(1),
+    #pos2:checked ~ .bullet label:nth-child(2),
+    #pos3:checked ~ .bullet label:nth-child(3),
+    #pos4:checked ~ .bullet label:nth-child(4){background:#F5E637;}
+
+      h3{
+        color: #F5E637;
+        font-size: 20px;
+        width: 90px;
+        height: 20px;
+        padding-top: 5px;
+      }
+      h3:hover {
+        background: url('https://postfiles.pstatic.net/MjAxOTA2MDlfODMg/MDAxNTYwMDA3NTE5NzMx.tuM-HeR3MqrfEmR0bHh8r7zku2hmEq71MGRtCIy222Qg.ul8LteC5jlnUFGDbvJrTbuBdQ5ra1Lo5rpbQI5-2sz0g.PNG.cide0615/Asset_11.png?type=w966');
+      }
+      a {
+        text-decoration: none;
+      }
+
+  </style>
+  </head>
+
+  <body>
+    <header>
+      <h1> Illust Design </h1>
+    <div class="slide">
+    <input type="radio" name="pos" id="pos1" checked>
+    <input type="radio" name="pos" id="pos2">
+    <input type="radio" name="pos" id="pos3">
+    <input type="radio" name="pos" id="pos4">
+
+    <ul>
+      <li><a href="https://postfiles.pstatic.net/MjAxOTA2MDhfMjg2/MDAxNTU5OTk1MjczMDE3.0CpNIubIHZLyVnAWdtT1PcN2xFb4x4juRVE_kV_oY0sg.phWLu9e4mNpSr0bPphZAz71Wo1fBd6Y_pjbTc2blf_og.PNG.cide0615/%EC%BB%A4%ED%94%BC.png?type=w966" target="_blank">
+        <h3>원본 보기</h3></a></li>
+      <li><a href="https://postfiles.pstatic.net/MjAxOTA2MDhfMTQz/MDAxNTU5OTk1MjczNDQ2.mUWcNe4dOG1-_TTltygleGK9B-9GsP1lDWwSoDaRmk4g.mtNyReikj8MAP-SdTJJZ0iUMbOgDaUyJ4w3t1x2FEEkg.PNG.cide0615/%ED%95%A0%EC%95%84%EB%B2%84%EC%A7%80.png?type=w966" target="_blank">
+        <h3>원본 보기</h3></a></li>
+      <li><a href="https://postfiles.pstatic.net/MjAxOTA2MDhfNTgg/MDAxNTU5OTk1MjczMDg4.NWsZoU3-f_ydA0uJefffuMEYCuJ6FriNANRuWYUPdC4g.j8dcZMdgF1GZsb8HKXBeSEzBlA_MKQFA6viPA6c-ghkg.JPEG.cide0615/%EC%BA%94%EB%B2%84%EC%8A%A4.jpg?type=w966" target="_blank">
+        <h3>원본 보기</h3></a></li>
+      <li><a href="https://postfiles.pstatic.net/MjAxOTA2MDhfMTM5/MDAxNTU5OTk1MjczMDQ3.YrFDKylrC9u2RlKFnUce_-14rS7eiUpOMyD_HS2BlBMg.uPxOlV8kaSM_23paclVEKq15bGVQFq5m87cZqMDT7n4g.JPEG.cide0615/poster.jpg?type=w966" target="_blank">
+        <h3>원본 보기</h3></a></li>
+
+    </ul>
+    <p class="bullet">
+      <label for="pos1">1</label>
+      <label for="pos2">2</label>
+      <label for="pos3">3</label>
+      <label for="pos4">4</label>
+
+    </p>
+  </div>
+  </header>
+  </body>
+</html>
