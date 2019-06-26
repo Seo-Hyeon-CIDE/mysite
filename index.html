@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="`en`" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>수상한 도구점</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+
+      }
+    header {
+      margin: 10px 0 0 440px;
+
+    }
+    nav{
+      margin: 0 360px 0px 360px;
+    }
+
+    footer{
+      width: 100%;
+      height: 200px;
+      background-color: #6BB92D;
+      opacity: 0.8;
+    }
+    section{
+      width: 1000px;
+      height: 50px;
+      float: left;
+      margin: 0 450px 0px 440px;
+      }
+    #foot {     /*contact를 누를시 푸터로 이동용 id */
+    }
+    #topmenu{             /*탑 메뉴 크기 설정 */
+      height: 50px;
+      width: 1000px;
+      margin: 20px 440px 20px 435px;
+    }
+    #topmenu ul {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+    }
+    #topmenu ul li{     /*탑 메뉴 스타일 설정 */
+      list-style: none;
+      color: brown;
+      float: left;
+      background-color: white;
+      line-height: 50px;
+      vertical-align: middle;
+      text-align: center;
+      position: relative;
+    }
+    #topmenu .link {        /*탑 메뉴 속 a태그=li 스타일 설정 */
+      text-decoration: none;
+      color: brown;
+      display: block;
+      width: 200px;
+      font-size: 20px;
+    }
+
+    #topmenu .link:hover {  /*탑 메뉴 마우스 오버시 스타일 설정 */
+      color: green;
+      text-decoration: underline;
+      font-weight: bold;
+      background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMzAw/MDAxNTU5OTI3MDI5MDY2.JvEztY-THq61gu-y3GKxvpTfb0cNpKIw2gM3huZNNTUg.xc2Cpf9-7mcmZZqJJW0qd3u83Xungq0WFxlkzhZp5Dog.PNG.cide0615/Asset_6.png?type=w966')
+
+    }
+    .submenuli {     /*서브 메뉴 스타일 설정 */
+      display: block;
+      width: 200px;
+      font-size: 15px;
+      text-decoration: none;
+      color: brown;
+      border: solid 1px black;
+      margin-top: -1px;
+    }
+      .submenu {       /*서브 메뉴 ul=전체 스타일 설정 */
+      position: absolute;
+      height: 0px;    /*초기 높이 0 */
+      overflow: hidden;   /*오버플로우 됐을 때 해당 내용 감추기 */
+      transition: .3s; /*나타나는 속도 설정 */
+    }
+    .submenuli:hover {    /*서브 메뉴 마우스 오버시 스타일 설정 */
+      color: green;
+      text-decoration: underline;
+      font-weight: bold;
+      background: url('https://postfiles.pstatic.net/MjAxOTA2MDhfMzAw/MDAxNTU5OTI3MDI5MDY2.JvEztY-THq61gu-y3GKxvpTfb0cNpKIw2gM3huZNNTUg.xc2Cpf9-7mcmZZqJJW0qd3u83Xungq0WFxlkzhZp5Dog.PNG.cide0615/Asset_6.png?type=w966')
+    }
+    .topmenuli:hover .submenu{  /*서브 메뉴 마우스 오버시 길이 설정 */
+      height: 200px;
+    }
+
+    .email {
+      text-align: center;
+      color: white;
+      font-size: 20px;
+      margin-top: 5px;
+    }
+    .icon {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <a href="hsh_banner.html" target='content'>
+      <img width="1000" height="150" src='https://postfiles.pstatic.net/MjAxOTA2MDhfMTMz/MDAxNTU5OTI4MTE4Mjc3.JV6JJEAC0POGhqc1PiuQGyUMnm9XnCAzTg4NJXqo5C4g.awuFRCQcnc6oa83OrNd5DZYp9nTMdVCiMA758ekJioAg.PNG.cide0615/Asset_7.png?type=w966'>
+      </a>
+      </header>
+    <nav id="topmenu">
+
+      <ul>
+        <li> <a class="link" href="hsh_banner.html" target='content'> Home </a></li>
+        <li> <a class="link" href="hsh_intro.html" target='content'> Introduction </a></li>
+        <li> <a class="link" href="hsh-youtube.html" target='content'> Youtube </a></li>
+        <li class='topmenuli'> <a class="link" href="hsh_gallery.html" target='content'> Gallery </a>
+          <ul class='submenu'>
+            <li><a href="hsh_graphic.html" target='content' class="submenuli"> Graphic Design</a></li>
+            <li><a href="hsh_illust.html" target='content' class="submenuli"> Illust Design</a></li>
+            <li><a href="hsh_other.html" target='content' class="submenuli"> Other Design</a></li>
+            </ul>
+        </li>
+        <li> <a class="link" href='#foot'> Contact </a></li>
+        </ul>
+      </nav>
+<div align="center">
+  <iframe  src="hsh_banner.html" frameborder="0" width="100%" height="680" name='content' marginwidth="350" marginheight="0" scrolling="yes">
+  </iframe>
+  </div>
+    <footer id="foot">
+            <section class="icon">
+          <a href="https://blog.naver.com/cide0615" target="_blank">
+          <img src="https://postfiles.pstatic.net/MjAxOTA2MDlfMTI1/MDAxNTYwMDE0NzE5ODM3.dorRFxJkHYiOXfGRj8IhK-Z2zuUeRxG-1ngxWYiONdcg.lHxoN4aKk820bhuBRdGMyVj294KMONHwEsPcL2SguAcg.PNG.cide0615/blog.png?type=w966"></a>
+          <a href="https://www.instagram.com/hong_seo615" target="_blank">
+          <img src="https://postfiles.pstatic.net/MjAxOTA2MDlfMTA0/MDAxNTYwMDE0NzE5ODQ5.eaWSJSamD7nuSOu6uYwkD938xEvSl7Nm3493lc6tJ3cg.dNgZOPZydI5HQCY11IWiuAu29RiPS2_NPjjJRlgImhsg.PNG.cide0615/insta.png?type=w966"></a>
+          <a href="https://www.youtube.com/channel/UCnMaSGQ5Yd2xF68zu39MNsg" target="_blank">
+          <img src="https://postfiles.pstatic.net/MjAxOTA2MDlfMjA2/MDAxNTYwMDE0NzE5ODUx.zrQquZMUDHzr5dQNj1nNdSFpzDBtb9kjEWXI0z6Y9WQg.M1QregUWG2bokhsWUcohmcB1JlnNQOrrX84K2YSBQsog.PNG.cide0615/youtube.png?type=w966"></a>
+        </section>
+      <section class="email">
+        E-mail : cide0615@naver.com / strangestorecide@gmail.com<br><br>
+        <audio src="https://drive.google.com/uc?authuser=0&id=1oTlk5iZtBmLRKW875MA_6579Klh5Hicf&export=download" autoplay="true" controls="true" loop="infinite"></audio>
+          </section>
+
+      </footer>
+  </body>
+</html>
